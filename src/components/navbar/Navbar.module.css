@@ -1,0 +1,14 @@
+.navbar {
+  grid-area: n;
+  background-color: #62b6cb;
+  padding: 10px;
+}
+
+.item a{
+  color: white;
+  text-decoration: none;
+}
+
+a[class="active"] {
+  color: purple;
+}
