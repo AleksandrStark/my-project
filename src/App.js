@@ -20,7 +20,12 @@ function App(props) {
 				<Routes>
 					<Route
 						path="/profile"
-						element={<Profile state={props.store.state.profilePage} />}
+						element={
+							<Profile
+								state={props.store.state.profilePage}
+								addPost={props.store.addPost}
+							/>
+						}
 					/>
 					<Route
 						exact

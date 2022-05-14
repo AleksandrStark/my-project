@@ -50,6 +50,15 @@ let store = {
 
 		sidebar: {},
 	},
+	addPost: (postMesssage) => {
+		let newPost = {
+			id: 5,
+			message: 'Hi, kababanga!',
+			likesCount: 5,
+			img: 'https://avatars.mds.yandex.net/i?id=fa8bf0b239b278f5aead284a77b16f90-5449757-images-thumbs&n=13',
+		};
+		store.state.profilePage.posts.push(newPost);
+	},
 };
 
 export default store;

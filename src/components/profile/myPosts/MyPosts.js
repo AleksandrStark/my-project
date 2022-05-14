@@ -3,8 +3,12 @@ import classes from './MyPosts.module.css';
 import Post from './post/Post';
 
 const MyPosts = (props) => {
+	let newPostElement = React.createRef();
+
 	let onAddPost = () => {
-		alert('new post');
+		console.log(props);
+		let text = newPostElement.current.value;
+		props.addPost(text);
 	};
 
 	let onPostChange = (e) => {
@@ -12,14 +16,23 @@ const MyPosts = (props) => {
 		alert(text);
 	};
 	let postsElements = props.state.posts.map((post) => (
-		<Post message={post.message} likesCount={post.likesCount} img={post.img} />
+		<Post
+			key={post.id}
+			message={post.message}
+			likesCount={post.likesCount}
+			img={post.img}
+		/>
 	));
 
 	return (
 		<div className={classes.postBlock}>
 			<h3>My Posts</h3>
 			<div>
-				<textarea onChange={onPostChange} value={props.state.newPostText} />
+				<textarea
+					onChange={onPostChange}
+					value={props.state.newPostText}
+					ref={newPostElement}
+				/>
 			</div>
 			<div>
 				<button onClick={onAddPost}> addPost </button>
