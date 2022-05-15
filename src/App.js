@@ -22,15 +22,16 @@ function App(props) {
 						path="/profile"
 						element={
 							<Profile
-								state={props.store.state.profilePage}
-								addPost={props.store.addPost}
+								state={props.state.profilePage}
+								addPost={props.addPost}
+								updateNewPostText={props.updateNewPostText}
 							/>
 						}
 					/>
 					<Route
 						exact
 						path="/dialogs"
-						element={<Dialogs state={props.store.state.messagesPage} />}
+						element={<Dialogs state={props.state.messagesPage} />}
 					/>
 					<Route path="/news" element={<News />} />
 					<Route path="/music" element={<Music />} />
