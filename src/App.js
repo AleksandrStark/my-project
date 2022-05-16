@@ -31,7 +31,13 @@ function App(props) {
 					<Route
 						exact
 						path="/dialogs"
-						element={<Dialogs state={props.state.messagesPage} />}
+						element={
+							<Dialogs
+								state={props.state.messagesPage}
+								sendNewMessage={props.sendNewMessage}
+								updateNewMessageBody={props.updateNewMessageBody}
+							/>
+						}
 					/>
 					<Route path="/news" element={<News />} />
 					<Route path="/music" element={<Music />} />

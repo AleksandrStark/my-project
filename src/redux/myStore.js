@@ -5,7 +5,7 @@ let state = {
 		posts: [
 			{
 				id: 1,
-				message: 'Hi, it is me',
+				message: "Hi, it' it's me",
 				likesCount: 5,
 				img: 'https://avatars.mds.yandex.net/i?id=fa8bf0b239b278f5aead284a77b16f90-5449757-images-thumbs&n=13',
 			},
@@ -51,6 +51,7 @@ let state = {
 
 	sidebar: {},
 };
+
 export let addPost = () => {
 	let newPost = {
 		id: 5,
@@ -65,6 +66,21 @@ export let addPost = () => {
 
 export let updateNewPostText = (newText) => {
 	state.profilePage.newPostText = newText;
+	rerenderEntireTree(state);
+};
+
+export let sendNewMessage = () => {
+	let newMessage = {
+		id: 6,
+		message: state.messagesPage.newMessageBody,
+	};
+	state.messagesPage.messages.push(newMessage);
+	state.messagesPage.newMessageBody = '';
+	rerenderEntireTree(state);
+};
+
+export let updateNewMessageBody = (body) => {
+	state.messagesPage.newMessageBody = body;
 	rerenderEntireTree(state);
 };
 

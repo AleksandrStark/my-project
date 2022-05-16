@@ -3,8 +3,6 @@ import classes from './MyPosts.module.css';
 import Post from './post/Post';
 
 const MyPosts = (props) => {
-	let newPostElement = React.createRef();
-
 	let onAddPost = () => {
 		props.addPost();
 	};
@@ -27,11 +25,7 @@ const MyPosts = (props) => {
 		<div className={classes.postBlock}>
 			<h3>My Posts</h3>
 			<div>
-				<textarea
-					onChange={onPostChange}
-					ref={newPostElement}
-					value={props.state.newPostText}
-				/>
+				<textarea onChange={onPostChange} value={props.state.newPostText} />
 			</div>
 			<div>
 				<button onClick={onAddPost}> addPost </button>

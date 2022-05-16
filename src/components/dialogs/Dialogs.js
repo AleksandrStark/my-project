@@ -5,22 +5,22 @@ import DialogItem from './dialogItem/DialogItem';
 import Message from './message/Message';
 
 const Dialogs = (props) => {
+	let onSendNewMessage = () => {
+		props.sendNewMessage();
+	};
+
+	let onTypeMessage = (e) => {
+		let body = e.target.value;
+		props.updateNewMessageBody(body);
+	};
+
 	let dialogsElements = props.state.dialogs.map((d) => (
-		<DialogItem name={d.name} id={d.id} />
+		<DialogItem key={d.id} name={d.name} id={d.id} />
 	));
 
 	let messagesElements = props.state.messages.map((m) => (
 		<Message key={m.id} id={m.id} message={m.message} />
 	));
-
-	let sendNewMessage = () => {
-		alert('message was sent');
-	};
-
-	let onTypeMessage = (e) => {
-		let text = e.target.value;
-		alert(text);
-	};
 
 	return (
 		<div className={classes.dialogs}>
@@ -31,10 +31,10 @@ const Dialogs = (props) => {
 				<div>
 					<textarea
 						onChange={onTypeMessage}
-						value={props.newMessage}
+						value={props.state.newMessageBody}
 					></textarea>
 				</div>
-				<button onClick={sendNewMessage}>Send message</button>
+				<button onClick={onSendNewMessage}>Send message</button>
 			</div>
 		</div>
 	);
