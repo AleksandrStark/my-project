@@ -11,6 +11,8 @@ import Settings from './components/settings/Settings';
 import { Route, Routes } from 'react-router-dom';
 
 function App(props) {
+	// debugger;
+
 	return (
 		<div className="App">
 			<Header />
@@ -23,8 +25,7 @@ function App(props) {
 						element={
 							<Profile
 								state={props.state.profilePage}
-								addPost={props.addPost}
-								updateNewPostText={props.updateNewPostText}
+								dispatch={props.dispatch}
 							/>
 						}
 					/>
@@ -34,8 +35,7 @@ function App(props) {
 						element={
 							<Dialogs
 								state={props.state.messagesPage}
-								sendNewMessage={props.sendNewMessage}
-								updateNewMessageBody={props.updateNewMessageBody}
+								dispatch={props.dispatch}
 							/>
 						}
 					/>

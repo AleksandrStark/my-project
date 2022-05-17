@@ -3,15 +3,20 @@ import React from 'react';
 import classes from './Dialogs.module.css';
 import DialogItem from './dialogItem/DialogItem';
 import Message from './message/Message';
+import {
+	sendMessageActionCreator,
+	updateNewMessageBodyActionCreator,
+} from '../../redux/myStore';
 
 const Dialogs = (props) => {
 	let onSendNewMessage = () => {
-		props.sendNewMessage();
+		props.dispatch(sendMessageActionCreator());
 	};
 
 	let onTypeMessage = (e) => {
 		let body = e.target.value;
-		props.updateNewMessageBody(body);
+		let action = updateNewMessageBodyActionCreator(body);
+		props.dispatch(action);
 	};
 
 	let dialogsElements = props.state.dialogs.map((d) => (
