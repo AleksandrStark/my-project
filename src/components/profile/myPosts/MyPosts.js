@@ -30,7 +30,11 @@ const MyPosts = (props) => {
 		<div className={classes.postBlock}>
 			<h3>My Posts</h3>
 			<div>
-				<textarea onChange={onPostChange} value={props.state.newPostText} />
+				<textarea
+					placeholder="Write your post"
+					onChange={onPostChange}
+					value={props.state.newPostText}
+				/>
 			</div>
 			<div>
 				<button onClick={onAddPost}> addPost </button>

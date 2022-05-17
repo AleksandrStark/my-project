@@ -32,7 +32,7 @@ let store = {
 					img: 'https://avatars.mds.yandex.net/i?id=c1091b2c2f708a036a775977db057184-5241083-images-thumbs&n=13',
 				},
 			],
-			newPostText: 'Write your message',
+			newPostText: '',
 		},
 
 		messagesPage: {
@@ -50,7 +50,7 @@ let store = {
 				{ id: 4, message: 'You should train harder' },
 				{ id: 5, message: "Who'll buy me a drink" },
 			],
-			newMessageBody: 'Write here',
+			newMessageBody: '',
 		},
 
 		sidebar: {},
