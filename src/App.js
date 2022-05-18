@@ -11,8 +11,6 @@ import Settings from './components/settings/Settings';
 import { Route, Routes } from 'react-router-dom';
 
 function App(props) {
-	// debugger;
-
 	return (
 		<div className="App">
 			<Header />
