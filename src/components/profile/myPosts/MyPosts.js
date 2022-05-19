@@ -8,16 +8,15 @@ import Post from './post/Post';
 
 const MyPosts = (props) => {
 	let onAddPost = () => {
-		props.dispatch(addPostActionCreator());
+		props.addPost();
 	};
 
 	let onPostChange = (e) => {
 		let text = e.target.value;
-		let action = updateNewPostTextActionCreator(text);
-		props.dispatch(action);
+		props.updateNewPostText(text);
 	};
 
-	let postsElements = props.state.posts.map((post) => (
+	let postsElements = props.posts.map((post) => (
 		<Post
 			key={post.id}
 			message={post.message}
@@ -33,7 +32,7 @@ const MyPosts = (props) => {
 				<textarea
 					placeholder="Write your post"
 					onChange={onPostChange}
-					value={props.state.newPostText}
+					value={props.newPostText}
 				/>
 			</div>
 			<div>
