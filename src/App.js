@@ -18,12 +18,8 @@ function App(props) {
 
 			<div className="App__content">
 				<Routes>
-					<Route path="/profile" element={<Profile store={props.store} />} />
-					<Route
-						exact
-						path="/dialogs"
-						element={<DialogsContainer store={props.store} />}
-					/>
+					<Route path="/profile" element={<Profile />} />
+					<Route exact path="/dialogs" element={<DialogsContainer />} />
 					<Route path="/news" element={<News />} />
 					<Route path="/music" element={<Music />} />
 					<Route path="/settings" element={<Settings />} />
