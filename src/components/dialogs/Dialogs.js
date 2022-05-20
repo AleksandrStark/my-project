@@ -5,6 +5,7 @@ import DialogItem from './dialogItem/DialogItem';
 import Message from './message/Message';
 
 const Dialogs = (props) => {
+	debugger;
 	let state = props.messagesPage;
 
 	let onSendNewMessage = () => {
