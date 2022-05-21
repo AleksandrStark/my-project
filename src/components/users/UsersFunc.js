@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './Users.module.css';
 import userPhoto from '../../images/user.png';
 
-const Users = (props) => {
+const UsersFunc = (props) => {
 	let getUsers = () => {
 		if (props.users.length === 0) {
 			axios
@@ -61,4 +61,4 @@ const Users = (props) => {
 	);
 };
 
-export default Users;
+export default UsersFunc;
