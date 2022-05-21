@@ -9,6 +9,7 @@ import Settings from './components/settings/Settings';
 
 import { Route, Routes } from 'react-router-dom';
 import DialogsContainer from './components/dialogs/DialogsContainer';
+import UsersContainer from './components/users/UsersContainer';
 
 function App(props) {
 	return (
@@ -22,6 +23,7 @@ function App(props) {
 					<Route exact path="/dialogs" element={<DialogsContainer />} />
 					<Route path="/news" element={<News />} />
 					<Route path="/music" element={<Music />} />
+					<Route path="/users" element={<UsersContainer />} />
 					<Route path="/settings" element={<Settings />} />
 				</Routes>
 			</div>
