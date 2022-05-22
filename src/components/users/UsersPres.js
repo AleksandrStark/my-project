@@ -18,7 +18,9 @@ let UsersPres = (props) => {
 							onClick={(e) => {
 								props.onPageChanged(p);
 							}}
-							className={props.currentPage === p && classes.selectedPage}
+							className={
+								props.currentPage === p ? classes.selectedPage : undefined
+							}
 						>
 							{p}
 						</span>
