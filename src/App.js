@@ -19,7 +19,8 @@ function App(props) {
 
 			<div className="App__content">
 				<Routes>
-					<Route path="/profile/*" element={<ProfileContainer />} />
+					<Route path="/profile/:userID" element={<ProfileContainer />} />
+					<Route path="/profile" element={<ProfileContainer />} />
 					<Route exact path="/dialogs" element={<DialogsContainer />} />
 					<Route path="/news" element={<News />} />
 					<Route path="/music" element={<Music />} />
