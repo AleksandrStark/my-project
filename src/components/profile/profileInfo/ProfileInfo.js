@@ -9,7 +9,7 @@ const ProfileInfo = (props) => {
 		<div>
 			<div className={classes.avatar}>
 				<img
-					src="https://avatars.mds.yandex.net/i?id=92dbbfcc726cf6283e67e12e8e4d6f2f-5910641-images-thumbs&n=13"
+					src="https://i.pinimg.com/originals/2d/e8/82/2de882cd4f3992ada3d609e3a183f7a4.jpg"
 					alt=""
 				/>
 			</div>

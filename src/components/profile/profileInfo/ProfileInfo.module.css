@@ -1,13 +1,14 @@
 .avatar {
-  text-align:left;
-  padding: 5px;
+	text-align: left;
+	padding: 5px;
 }
 
-.avatar img{
-  border-radius: 20px;
+.avatar img {
+	width: auto;
+	height: 280px;
 }
 
 .description {
-  text-align:left;
-  padding: 10px;
+	text-align: left;
+	padding: 10px;
 }
