@@ -6,7 +6,7 @@ const Navbar = () => {
 	return (
 		<div className={classes.navbar}>
 			<div className={`${classes.item} ${classes.active}`}>
-				<NavLink to="/profile"> Profile </NavLink>
+				<NavLink to="/profile/"> Profile </NavLink>
 			</div>
 
 			<div className={classes.item}>
