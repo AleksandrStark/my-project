@@ -15,7 +15,6 @@ let UsersPres = (props) => {
 				{pages.map((p) => {
 					return (
 						<span
-							key={p.id}
 							onClick={(e) => {
 								props.onPageChanged(p);
 							}}

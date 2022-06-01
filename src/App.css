@@ -1,5 +1,5 @@
 .App {
-	text-align: center;
+	text-align: left;
 	width: 1200px;
 	display: grid;
 	grid-template-rows: 100px 1fr;
