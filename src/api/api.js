@@ -53,4 +53,16 @@ export const authAPI = {
 			return response.data;
 		});
 	},
+	login(email, password, remenberMe = false) {
+		return instance
+			.post(`auth/login`, { email, password, remenberMe })
+			.then((response) => {
+				return response.data;
+			});
+	},
+	logout() {
+		return instance.delete(`auth/login`).then((response) => {
+			return response.data;
+		});
+	},
 };
