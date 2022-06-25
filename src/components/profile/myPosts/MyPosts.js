@@ -8,7 +8,7 @@ import {
 } from '../../../utils/validators/validators';
 import { Textarea } from '../../common/formControls/FormsControls';
 
-const MyPosts = (props) => {
+const MyPosts = React.memo((props) => {
 	let onAddPost = (value) => {
 		props.addPost(value.newPostText);
 	};
@@ -30,7 +30,7 @@ const MyPosts = (props) => {
 			<div className={classes.posts}>{postsElements}</div>
 		</div>
 	);
-};
+});
 
 const maxLength10 = maxLengthCreator(10);
 
