@@ -13,14 +13,16 @@ const MyPosts = React.memo((props) => {
 		props.addPost(value.newPostText);
 	};
 
-	let postsElements = props.posts.map((post) => (
-		<Post
-			key={post.id}
-			message={post.message}
-			likesCount={post.likesCount}
-			img={post.img}
-		/>
-	));
+	let postsElements = [...props.posts]
+		.reverse()
+		.map((post) => (
+			<Post
+				key={post.id}
+				message={post.message}
+				likesCount={post.likesCount}
+				img={post.img}
+			/>
+		));
 
 	return (
 		<div className={classes.postBlock}>
