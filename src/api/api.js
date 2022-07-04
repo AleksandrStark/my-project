@@ -65,15 +65,22 @@ export const authAPI = {
 			return response.data;
 		});
 	},
-	login(email, password, remenberMe = false) {
+	login(email, password, remenberMe = false, captcha = null) {
 		return instance
-			.post(`auth/login`, { email, password, remenberMe })
+			.post(`auth/login`, { email, password, remenberMe, captcha })
 			.then((response) => {
 				return response.data;
 			});
 	},
 	logout() {
 		return instance.delete(`auth/login`).then((response) => {
+			return response.data;
+		});
+	},
+};
+export const securityAPI = {
+	getCaptchaUrl() {
+		return instance.get(`security/get-captcha-url`).then((response) => {
 			return response.data;
 		});
 	},
