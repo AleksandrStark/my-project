@@ -23,6 +23,7 @@ export default function ProfileStatusHooks(props) {
 		<div>
 			{!editMode && (
 				<div>
+					<b>status: </b>
 					<span onDoubleClick={activateEditMode}>
 						{props.status || '----'}{' '}
 					</span>
